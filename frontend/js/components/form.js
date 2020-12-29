@@ -20,7 +20,7 @@ async function sendFormData(form){
             errorMessage += `${itm}, `
         });
         errorMessage.trim();
-        errorMessage.substr(0, errorMessage.length-1);
+        errorMessage.substr(0, errorMessage.length-2);
         form.querySelector('.error').innerText = errorMessage
     }
     else if(res.success){

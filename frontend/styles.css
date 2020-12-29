@@ -46,7 +46,7 @@ root, html{
 }
 
 .popup form{
-    width: 75%;
+    width: 45%;
     height: 85%;
     background-color: #faf8ff;
     display: flex;
@@ -109,4 +109,16 @@ input{
 .filters div{
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 1200px){
+    .popup form{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .popup form{
+        width: 90%;
+    }
 }
