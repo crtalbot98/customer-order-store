@@ -13,7 +13,6 @@ router.post('/add', async (req, res, next) => {
     const body = req.body;
     const conn = await connection();
     let [rows, fields] = await conn.execute(`SELECT * FROM customers WHERE contactLastName = "Talbot"`);
-    console.log(rows);
     const errors = checkErrors(body, ['customerName', 'contactLastName', 'contactFirstName', 'phone', 'addressLine1', 'city', 'country', 'salesRepEmployee', 'creditLimit']);
 
     for(let key in body){
